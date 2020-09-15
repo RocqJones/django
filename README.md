@@ -2,7 +2,7 @@
 Django: Python-based open-source web framework that follows the model-template-views architectural pattern.
 
 ## INSTALLING Django
-    ```$ python3 -m pip install Django```
+```$ python3 -m pip install Django```
 
 ## CHECKING Django version
 ```
@@ -11,8 +11,8 @@ Django: Python-based open-source web framework that follows the model-template-v
 ```
 
 ## START A PROJECT
-    ```$ django-admin startproject mysite .```
-    // don't forget the '.' at the end. run this command inside the project directory
+```$ django-admin startproject mysite .```
+// don't forget the '.' at the end. run this command inside the project directory
 
 ## OVERVIEW
 * "manage.py" is a script that helps with management of the site. 
@@ -22,11 +22,11 @@ Django: Python-based open-source web framework that follows the model-template-v
 * **NOTE:** *Let's ignore the other files for now as we won't change them. The only thing to remember is not to delete them by accident!*
 
 ## CREATING DATABASE (sqlite3)
-    ```$ python3 manage.py migrate```
-    // This goes to the project directory with manage.py
+```$ python3 manage.py migrate```
+// This goes to the project directory with manage.py
 
 ## RUN SERVER
-    ```$ python3 manage.py runserver```
+```$ python3 manage.py runserver```
 
 HOORAY!!! The first Django web app is up and running.
 <a href="url"><img src="https://github.com/RocqJones/django/blob/master/imgs/django.png" height="400" width="100%" ></a>
