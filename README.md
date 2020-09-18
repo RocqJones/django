@@ -1,7 +1,7 @@
 # django
 Django: Python-based open-source web framework that follows the model-template-views architectural pattern.
 
-## INSTALLING Django via pip
+## Instaling Django via pip
 ```$ python3 -m pip install Django```
 
 ### Checking Django version
@@ -15,7 +15,7 @@ Django: Python-based open-source web framework that follows the model-template-v
 // don't forget the '.' at the end. run this command inside the project directory
 
 ### Overview of the locallibrary project sub-folder
-* "manage.py" is a script that helps with management of the site. 
+* **manage.py** is a script that helps with management of the site. 
     - (amongst other things) it enables us to start a web server without installing anything else.
 * **__init__.py** is an empty file that instructs Python to treat this directory as a Python package.
 * **settings.py** contains all the website settings, including registering any applications we create, the location of our static files, database configuration details, etc.  
