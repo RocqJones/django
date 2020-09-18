@@ -14,12 +14,18 @@ Django: Python-based open-source web framework that follows the model-template-v
 ```$ django-admin startproject mysite .```
 // don't forget the '.' at the end. run this command inside the project directory
 
-### Overview
+### Overview of the locallibrary project sub-folder
 * "manage.py" is a script that helps with management of the site. 
     - (amongst other things) it enables us to start a web server without installing anything else.
-* "settings.py" file contains the configuration of your website.
-* "urls.py" file contains a list of patterns used by urlresolver.
+* **__init__.py** is an empty file that instructs Python to treat this directory as a Python package.
+* **settings.py** contains all the website settings, including registering any applications we create, the location of our static files, database configuration details, etc.  
+* **urls.py** defines the site URL-to-view mappings. While this could contain all the URL mapping code, it is more common to delegate some of the mappings to particular applications, as you'll see later.
+* **wsgi.py** is used to help your Django application communicate with the webserver. You can treat this as boilerplate.
+* **asgi.py** is a standard for Python asynchronous web apps and servers to communicate with each other. ASGI is the asynchronous successor to WSGI and provides a standard for both asynchronous and synchronous Python apps (whereas WSGI provided a standard for synchronous apps only). It is backward-compatible with WSGI and supports multiple servers and application frameworks.
 * **NOTE:** *Let's ignore the other files for now as we won't change them. The only thing to remember is not to delete them by accident!*
+
+#### Overview inside an app
+* **A migrations folder**, used to store "migrations" — files that allow you to automatically update your database as you modify your models.
 
 ### Creating database (sqlite3)
 ```$ python3 manage.py migrate```
@@ -31,6 +37,7 @@ Django: Python-based open-source web framework that follows the model-template-v
 HOORAY!!! The first Django web app is up and running.
 <a href="url"><img src="https://github.com/RocqJones/django/blob/master/imgs/django.png" height="400" width="100%" ></a>
 
+# Deep Dive.
 ## How Django code looks like in details.
 Django web applications typically group the code that handles each of these steps into separate files:
 <a href="url"><img src="https://github.com/RocqJones/django/blob/master/imgs/basic-django.png" height="400" width="50%" ></a>
