@@ -77,3 +77,10 @@ Template systems allow you to specify the structure of an output document, using
 <a href="url"><img src="https://github.com/RocqJones/django/blob/master/imgs/dj1.png" height="400" width="100%" ></a>
 After loading more information...
 <a href="url"><img src="https://github.com/RocqJones/django/blob/master/imgs/dj2.png" height="400" width="100%" ></a>
+
+## APP2: Extention of APP 1. Blog Page with comment section.
+### Overview of the page.
+<a href="url"><img src="https://github.com/RocqJones/django/blob/master/imgs/dj3.png" height="400" width="100%" ></a>
+
+### Comments
+<a href="url"><img src="https://github.com/RocqJones/django/blob/master/imgs/dj4.png" height="400" width="100%" ></a>
