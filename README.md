@@ -84,3 +84,6 @@ After loading more information...
 
 ### Comments
 <a href="url"><img src="https://github.com/RocqJones/django/blob/master/imgs/dj4.png" height="400" width="100%" ></a>
+
+## APP3: Blog Application
+We will create a simple blog application using Django
