@@ -7,7 +7,7 @@ class PublishedManager(models.Manager):
     def get_query_set(self):
         return super(PublishedManager, self).get_query_set().filter(status='published')
 
-# step 3
+# step 2
 class Post(models.Model):
 
     STATUS_CHOICE = (
