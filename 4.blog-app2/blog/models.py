@@ -2,7 +2,12 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 
-# Create your models here.
+# Step 4: model manager.
+class PublishedManager(models.Manager):
+    def get_query_set(self):
+        return super(PublishedManager, self).get_query_set().filter(status='published')
+
+# step 3
 class Post(models.Model):
 
     STATUS_CHOICE = (
@@ -26,6 +31,10 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    # call manager (step 4)
+    objects = models.Manager() # default manager
+    published = PublishedManager() # our custom manager
 
 """
 -> SLUG: This is a field intended to be used in URLs. It contains only letters, numbers, underscores, 
