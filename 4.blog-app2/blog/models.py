@@ -1,13 +1,14 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.urls import reverse
 
-# Step 4: model manager.
+# Part 4: model manager.
 class PublishedManager(models.Manager):
     def get_query_set(self):
         return super(PublishedManager, self).get_query_set().filter(status='published')
 
-# step 2
+# Part 2
 class Post(models.Model):
 
     STATUS_CHOICE = (
@@ -32,9 +33,15 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-    # call manager (step 4)
+    # call manager (extends Part 4)
     objects = models.Manager() # default manager
     published = PublishedManager() # our custom manager
+
+    # Part 8: Canonical URLs for models
+    def get_absolute_url(self):
+        return reverse('blog:post_detail', args=[self.publish.year, 
+                                                self.publish.month, 
+                                                self.publish.day, self.slug])
 
 """
 -> SLUG: This is a field intended to be used in URLs. It contains only letters, numbers, underscores, 
@@ -52,4 +59,10 @@ field in descending order by default when you query the database.
 
 -> The __str__() method is the default human-readable representation of the object. Django will use it in 
 many places, such as the administration site.
+
+-> Canonical URL is the preferred URL for a resource. 
+   * You may have different pages in your site where you display posts, but there is a single URL that you 
+   use as the main URL for a blog post. 
+   * The convention in Django is to add a get_absolute_url() method to the model that returns the 
+   canonical URL for the object.
 """
