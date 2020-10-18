@@ -87,5 +87,6 @@ After loading more information...
 
 ## APP3: Blog Application
 We will create a simple blog application using Django and keep advancing it.
+* **NOTE** ```{% load static %}``` tells Django to load the static template tags that are provided by the ```django.contrib.staticfiles``` application, which is contained in the *INSTALLED_APPS* setting.
 #### Admin.
 <a href="url"><img src="https://github.com/RocqJones/django/blob/master/imgs/admin1.png" height="400" width="100%" ></a>
