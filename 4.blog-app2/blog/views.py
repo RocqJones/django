@@ -7,6 +7,7 @@ def post_list(request):
     return render(request, 'list.html', {'posts': posts})
 
 def post_details(request, year, month, day, post):
+    # get_object_or_404() shortcut to retrieve the desired post.
     post = get_object_or_404(Post, slug = post, status = 'published', 
                             publish__year = 'year',
                             publish__month = 'month',
