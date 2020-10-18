@@ -39,9 +39,8 @@ class Post(models.Model):
 
     # Part 8: Canonical URLs for models
     def get_absolute_url(self):
-        return reverse('blog:post_detail', args=[self.publish.year, 
-                                                self.publish.month, 
-                                                self.publish.day, self.slug])
+        return reverse('blog:post_detail',
+                        args=[self.publish.year, self.publish.month, self.publish.day, self.slug])
 
 """
 -> SLUG: This is a field intended to be used in URLs. It contains only letters, numbers, underscores, 
