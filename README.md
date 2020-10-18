@@ -86,6 +86,6 @@ After loading more information...
 <a href="url"><img src="https://github.com/RocqJones/django/blob/master/imgs/dj4.png" height="400" width="100%" ></a>
 
 ## APP3: Blog Application
-We will create a simple blog application using Django
+We will create a simple blog application using Django and keep advancing it.
 #### Admin.
 <a href="url"><img src="https://github.com/RocqJones/django/blob/master/imgs/admin1.png" height="400" width="100%" ></a>
