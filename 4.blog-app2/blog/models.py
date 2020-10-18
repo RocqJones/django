@@ -39,7 +39,7 @@ class Post(models.Model):
 
     # Part 8: Canonical URLs for models
     def get_absolute_url(self):
-        return reverse('blog:post_detail',
+        return reverse('blog:post_details',
                         args=[self.publish.year, self.publish.month, self.publish.day, self.slug])
 
 """
