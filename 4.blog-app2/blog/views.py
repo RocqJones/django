@@ -4,7 +4,7 @@ from .models import Post
 # create a list and a detailed view
 def post_list(request):
     posts = Post.published.all()
-    return render(request, 'list.html', {'posts': posts})
+    return render(request, 'blog/post/list.html', {'posts': posts})
 
 def post_details(request, year, month, day, post):
     # get_object_or_404() shortcut to retrieve the desired post.
@@ -13,4 +13,4 @@ def post_details(request, year, month, day, post):
                             publish__month = 'month',
                             publish__day = 'day')
 
-    return render(request, 'detail.html', {'post': post})
+    return render(request, 'blog/post/detail.html', {'post': post})
